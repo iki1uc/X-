@@ -1,1 +1,124 @@
+# y-go-x.me · X-
+
+4ALL | Systems & Cooperation  
+Looking for real collaborators, not show players.  
+Languages: DE 100% • TR 60% • EN 25%  
+GitHub: /iki1uc
+
+---
+
+## What is this?
+
+**X- / y-go-x.me** is an open, experimental space for mapping **non-dangerous matter**  
+into **discrete, finite state systems** (up to 128 states) – from simple particles  
+to complex molecules.
+
+Ziel:  
+eine saubere, nachvollziehbare Brücke zwischen:
+
+- **Alltagssprache**  
+- **einfacher Physik/Chemie**  
+- **diskreten Zuständen / Systemlogik**
+
+---
+
+## Scope of the project
+
+We focus on:
+
+- **Non-dangerous materials only**  
+  - everyday substances  
+  - lab-safe examples  
+  - no explosives, no weapons, no toxics as core topic  
+- **Up to 128 states per model**
+  - simple, finite, clearly definable state spaces  
+  - e.g. charge states, spin states, binding states, configuration states  
+- **From particles to molecules**
+  - proton / electron / neutron as conceptual base  
+  - then: atoms, ions, simple molecules, larger structures (as far as cleanly modellable)
+
+Formale Basis (vereinfacht, nicht dogmatisch):
+
+- \(\text{state} \in \{0,1,\dots,127\}\)  
+- Mapping von:
+  - **(Proton, Elektron, Neutron, Bindung, Umgebung, etc.)**  
+  - auf **endliche Zustandsräume**
+
+---
+
+## What I am looking for
+
+I am looking for **real collaborators**, not show:
+
+- **Scientists, students, tinkerers**  
+  - Physics, chemistry, materials science  
+  - Computer science, discrete math, systems thinking  
+- People who can:
+  - propose **clean, non-dangerous example materials**  
+  - help define **up to 128-state models** per material  
+  - contribute **simple, checkable descriptions** (no black-box magic)
+
+If you can:
+
+- name a material  
+- describe its relevant states (max 128)  
+- and explain *why* this mapping makes sense  
+
+…then your input is highly valuable here.
+
+---
+
+## Example idea (informal)
+
+> This is NOT a final model, just a flavor.
+
+- Base concept:  
+  - \((\text{proton}, \text{electron}, \text{neutron})\) as structural carriers  
+- Build up:
+  - atom → molecule → material  
+- For each level:
+  - define a **finite state set** (≤ 128)  
+  - define **transitions** (what changes, why, under which conditions)
+
+---
+
+## How to contribute
+
+1. **Open an issue** with the label `material-proposal`
+2. Provide:
+   - **Name of material** (DE/EN)  
+   - **Safety**: short note why it is non-dangerous in this context  
+   - **State model**:
+     - number of states (≤ 128)  
+     - short description of each state or state class  
+   - **Optional**: references (papers, textbooks, reputable sources)
+3. Or create a **pull request** with:
+   - a new `.md` file under `materials/`  
+   - your proposed model in clear, simple language
+
+---
+
+## Why this matters
+
+This repo is meant to be:
+
+- a **didactic bridge** between real science and discrete system models  
+- a **playground** for finite-state thinking on real, non-dangerous matter  
+- a **transparent base** for later, more complex system work (4ALL, NoN, etc.)
+
+No hype.  
+No Babo.  
+Just **clean models, clear language, shared attention**.
+
+---
+
+## Contact / Links
+
+- GitHub: [iki1uc](https://github.com/iki1uc)
+- X: [@WieImmer2me](https://x.com/WieImmer2me)
+- YouTube: [wieimmer4u](https://www.youtube.com/@wieimmer4u)
+
+If you see something here and think  
+**“I can make this sharper, cleaner, more scientific”** –  
+you are exactly the kind of person I want to hear from.
 
