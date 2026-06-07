@@ -1,1 +1,87 @@
+<section id="x-minus">
+
+  <h1>X- / Modul-Raum</h1>
+  <p>
+    X- ist ein kleiner, aber scharf definierter Modul-Raum.
+    Er beschreibt nicht „was“ gerechnet wird, sondern „wie“ Module
+    sich verhalten: in Zuständen, in Bahnen, in KOOP.
+    X- ist die Grundschiene, auf der andere Systeme (z.B. 8ALL, 4ME, Toolomat)
+    aufsetzen können.
+  </p>
+
+  <h2>1D – Zustandslinie (1.x)</h2>
+  <pre>
+1.1 ── 1.2 ── 1.3 ── 1.4
+ |      |      |      |
+Start  Struktur Arbeit Kontrolle
+  </pre>
+  <p>
+    <strong>Beschreibung:</strong>
+    X- definiert vier feste Zustände:
+    1.1 = Start, 1.2 = Struktur, 1.3 = Arbeit, 1.4 = Kontrolle.
+    Jedes Modul im System wird einem dieser Zustände zugeordnet.
+    Das ist die einfachste Form von X-: eine Zustandslinie.
+  </p>
+
+  <h2>2D – Modul-Gitter (Gruppe × Zustand)</h2>
+  <pre>
+        1.1      1.2      1.3      1.4
+tm   |  RUN   |  CFG   |  API   |  LOG   |
+x4   |  CORE  |  MAP   |  OUT   |  VAL   |
+en   |  CORE  |  PIPE  |  MOD   |  OUT   |
+io   |  IN    |  MAP   |  OUT   |  LOG   |
+  </pre>
+  <p>
+    <strong>Beschreibung:</strong>
+    In 2D wird X- zu einem Gitter:
+    Zeilen sind Gruppen (tm, x4, en, io),
+    Spalten sind Zustände (1.1–1.4).
+    Jedes Feld ist ein Modul mit eigener Identität (ITEM + REV),
+    aber alle teilen sich denselben Grundcode.
+    Unterschied entsteht durch Position im Gitter, nicht durch Code.
+  </p>
+
+  <h2>3D – KOOP-Raum (Module im Zusammenspiel)</h2>
+  <pre>
+   [tm]───[x4]
+    │       │
+   [en]───[io]
+    │       │
+   [lg]───[ck]
+  </pre>
+  <p>
+    <strong>Beschreibung:</strong>
+    In 3D betrachtet X- nicht mehr nur einzelne Module,
+    sondern ihre KOOP-Beziehungen:
+    tm ↔ x4 (Task ↔ Norm),
+    en ↔ io (Engine ↔ Ein/Ausgabe),
+    lg ↔ ck (Logging ↔ Check).
+    Der Raum beschreibt, wie Module sich gegenseitig stützen,
+    prüfen, versorgen und rückkoppeln.
+  </p>
+
+  <h2>Schattungen: ITEM / REV / KOOP</h2>
+  <ul>
+    <li><strong>ITEM:</strong> Name des Moduls (z.B. <code>tm-ck-x4</code>)</li>
+    <li><strong>REV:</strong> 1.1 / 1.2 / 1.3 / 1.4 – Zustandskennung</li>
+    <li><strong>KOOP:</strong> Rolle im Verbund (Start, Struktur, Arbeit, Kontrolle)</li>
+  </ul>
+  <p>
+    Alle Module können denselben Platzhalter-Code tragen,
+    aber durch ITEM + REV + KOOP bleiben sie eindeutig.
+    X- liefert damit die Basis für Kalibrierung, SCAN und Drachenomatik:
+    Code ist gleich, Verhalten ist verschieden.
+  </p>
+
+  <h2>Drachenomatik in X-</h2>
+  <p>
+    „Drachenomatik“ bedeutet hier:
+    X- kann Module nicht nur ausführen, sondern auch
+    <em>einordnen</em>, <em>vergleichen</em> und <em>umschichten</em>.
+    Ein Modul kann von 1.1 → 1.2 → 1.3 → 1.4 wandern,
+    ohne seinen Code zu verlieren – nur seine Rolle.
+    So entsteht ein System, das klein bleibt, aber skaliert.
+  </p>
+
+</section>
 
