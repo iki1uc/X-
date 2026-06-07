@@ -1,1 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>X- / Toolomat</title>
+</head>
+<body>
+  <button id="b4me">4ME</button>
+  <button id="b4all">4ALL</button>
+  <pre id="out"></pre>
+
+  <script type="module">
+    import { tmMeRun } from './tm/me/run.js';
+    import { tmAlRun } from './tm/al/run.js';
+
+    const out = document.getElementById('out');
+
+    document.getElementById('b4me').onclick = () => {
+      const res = tmMeRun({ name: 'demo-4ME' });
+      out.textContent = JSON.stringify(res, null, 2);
+    };
+
+    document.getElementById('b4all').onclick = () => {
+      const res = tmAlRun({ name: 'demo-4ALL' });
+      out.textContent = JSON.stringify(res, null, 2);
+    };
+  </script>
+</body>
+</html>
 
