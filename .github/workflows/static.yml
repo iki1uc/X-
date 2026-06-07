@@ -1,0 +1,9 @@
+version: 1
+
+action:
+  id: wurf_81
+  label: "81-Wurf"
+  meaning: "Führe 81(1)-Operator aus"
+  operator: "op81"
+  impulse: 1
+  output: 81
