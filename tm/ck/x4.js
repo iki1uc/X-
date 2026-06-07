@@ -1,28 +1,37 @@
-// ITEM: <NAME>
-// REV: <REV>
-// MODE: HUHN → EI → OMELETT → SATT
+// ITEM: tm-ck-x4
+// REV: 1.2
+// ROLE: X4-Mapper (Struktur-KOOP)
 
-export const item = {
-  name: "<NAME>",
-  rev: "<REV>",
-  state: "EI",
-  input: null,
-  output: null
+/**
+ * x4 drückt 4 Zustände aus:
+ * 0 = OFF
+ * 1 = ON
+ * 2 = WARN
+ * 3 = FAIL
+ */
+
+export const X4_STATES = {
+  0: { id: 0, tag: 'OFF',  ok: false },
+  1: { id: 1, tag: 'ON',   ok: true  },
+  2: { id: 2, tag: 'WARN', ok: false },
+  3: { id: 3, tag: 'FAIL', ok: false }
 };
 
-export function run(input) {
-  item.state = "OMELETT";
-  item.input = input;
-  item.output = { ok: true, src: item.name, rev: item.rev };
-  return item.output;
-}
-
-export function check() {
+/**
+ * Nimmt einen Wert (0–3) und gibt den X4-Ausdruck zurück.
+ */
+export function x4(expr) {
+  const s = X4_STATES[expr] ?? X4_STATES[0];
   return {
-    item: item.name,
-    rev: item.rev,
-    state: "SATT",
-    valid: item.output !== null
+    x4: expr,
+    tag: s.tag,
+    ok: s.ok
   };
 }
 
+/**
+ * Kleine Hilfsfunktion: ist der Zustand „gültig aktiv“?
+ */
+export function x4Active(expr) {
+  return x4(expr).ok === true;
+}
