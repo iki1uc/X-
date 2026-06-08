@@ -1,29 +1,7 @@
-name: Deploy static site
+respo: "QB"
+id_op: "QB"
+base: 11
 
-on:
-  push:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+line: "L(n)=3n"
+instance: "I(n)=base+3n"
+axis: "A(n)=floor(n/3)+1"
