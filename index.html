@@ -2,29 +2,59 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>X- / Toolomat</title>
+  <title>X-/ CORE</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #0ff;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .xbox {
+      border: 1px solid #0ff;
+      padding: 20px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 0 12px #0ff;
+    }
+    button {
+      background: #000;
+      color: #0ff;
+      border: 1px solid #0ff;
+      padding: 6px 12px;
+      margin: 6px;
+      cursor: pointer;
+    }
+    #state {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
-  <button id="b4me">4ME</button>
-  <button id="b4all">4ALL</button>
-  <pre id="out"></pre>
 
-  <script type="module">
-    import { tmMeRun } from './tm/me/run.js';
-    import { tmAlRun } from './tm/al/run.js';
+  <div class="xbox">
+    <div>X-/ CORE</div>
+    <button id="m4">4ME</button>
+    <button id="a4">4ALL</button>
+    <div id="state">SPECTRUM: waiting…</div>
+  </div>
 
-    const out = document.getElementById('out');
+  <script>
+    function xSwitch(mode) {
+      document.getElementById("state").textContent =
+        "SPECTRUM: " + mode + " ACTIVE";
+    }
 
-    document.getElementById('b4me').onclick = () => {
-      const res = tmMeRun({ name: 'demo-4ME' });
-      out.textContent = JSON.stringify(res, null, 2);
-    };
-
-    document.getElementById('b4all').onclick = () => {
-      const res = tmAlRun({ name: 'demo-4ALL' });
-      out.textContent = JSON.stringify(res, null, 2);
-    };
+    document.getElementById("m4").onclick = () => xSwitch("4ME");
+    document.getElementById("a4").onclick = () => xSwitch("4ALL");
   </script>
+
 </body>
 </html>
-
